@@ -1,0 +1,20 @@
+package visitor;
+
+public class Company implements ReportElement {
+
+    private String nome;
+    private double emissao;
+
+    public Company(String nome, double emissao) {
+        this.nome = nome;
+        this.emissao = emissao;
+    }
+
+    public String getNome() { return nome; }
+    public double getEmissao() { return emissao; }
+
+    @Override
+    public void accept(ReportVisitor visitor) {
+        visitor.visit(this);
+    }
+}
