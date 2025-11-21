@@ -2,5 +2,5 @@ package adapter;
 
 
 public interface IApiAmbiental {
-    double obterFatorEmissao();
+    double obterFatorEmissao(String tipoCombustivel);
 }
