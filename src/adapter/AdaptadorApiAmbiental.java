@@ -20,7 +20,7 @@ public class AdaptadorApiAmbiental implements IApiAmbiental {
         } else if (tipoCombustivel.equalsIgnoreCase("Energia")) {
             // A APIGov atual não tem energia, então retornará 0.0
             // a menos que você adicione um "case" lá na classe ApiExternaGov
-            codigoParaApi = "ENERGY_X";
+            codigoParaApi = "ENERGY_BR";
         }
 
         // 2. CHAMADA REAL

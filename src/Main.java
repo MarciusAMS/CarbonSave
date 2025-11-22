@@ -74,6 +74,14 @@ public class Main {
         Person p = new Person(nome, emissaoTotal);
         Company c = new Company("EcoCorp", 950.8);
 
+        // 1. Definir a estratégia de compensação (Pode criar um menu extra para isso)
+// Vamos supor que o usuário quer plantar árvores:
+        IStrategyCompensacao strategyCompensacao = new CompensarComPlantio();
+
+// 2. Executar a compensação baseada na emissão total da Pessoa
+// (Certifique-se que sua classe Person/Usuario tem o método getEmissaoTotal)
+        Compensacao resultadoCompensacao = strategyCompensacao.executarCompensacao(p);
+
         System.out.println("\nEscolha o tipo de relatório:");
         System.out.println("1 - Relatório PDF");
         System.out.println("2 - Relatório HTML");
@@ -103,6 +111,7 @@ public class Main {
         c.accept(visitor);
         atividade.accept(visitor);
         emissao.accept(visitor);
+        resultadoCompensacao.accept(visitor);
 
         scanner.close();
     }

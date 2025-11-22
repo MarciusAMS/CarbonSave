@@ -2,6 +2,7 @@ package visitor;
 
 
 import model.Atividade;
+import model.Compensacao;
 import model.Emissao;
 
 public class PdfReportVisitor implements ReportVisitor {
@@ -37,5 +38,14 @@ public class PdfReportVisitor implements ReportVisitor {
         System.out.println("Quantidade CO2: " + emissao.getQuantidadeCO2());
         System.out.println("Fator Utilizado: " + emissao.getFatorUtilizado());
         System.out.println("--------------------------------");
+    }
+
+    @Override
+    public void visit(Compensacao compensacao) {
+        System.out.println("---- PDF: Relatório Compensação ----");
+        System.out.println("Tipo: " + compensacao.getTipo());
+        System.out.println("Descrição: " + compensacao.getDescricao());
+        System.out.println("Valor/Custo: " + compensacao.getQuantidadeCO2()); // Se quiser mostrar o valor numérico
+        System.out.println("------------------------------------");
     }
 }

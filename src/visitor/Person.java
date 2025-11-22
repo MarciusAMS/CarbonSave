@@ -10,6 +10,10 @@ public class Person implements ReportElement {
         this.emissao = emissao;
     }
 
+    public double getEmissaoTotal() {
+        return this.emissao;
+    }
+
     public String getNome() { return nome; }
     public double getEmissao() { return emissao; }
 

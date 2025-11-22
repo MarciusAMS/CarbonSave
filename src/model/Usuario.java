@@ -4,6 +4,7 @@ public class Usuario {
 
     private String nome;
     private Emissao ultimaEmissao;
+    private double emissaoTotal;
 
     public Usuario(String nome) {
         this.nome = nome;
@@ -14,5 +15,9 @@ public class Usuario {
 
     public void setUltimaEmissao(Emissao e) {
         this.ultimaEmissao = e;
+    }
+
+    public double getEmissaoTotal() {
+        return this.emissaoTotal;
     }
 }

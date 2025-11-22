@@ -1,5 +1,8 @@
 package strategy;
 
+import model.Compensacao;
+import model.Usuario;
+
 public class CarEmissionStrategy implements EmissionStrategy {
 
     private double km;
@@ -12,5 +15,4 @@ public class CarEmissionStrategy implements EmissionStrategy {
     public double calcular() {
         return km * 0.12; // Exemplo fictício
     }
-
 }

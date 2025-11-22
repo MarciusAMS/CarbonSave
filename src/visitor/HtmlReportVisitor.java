@@ -2,6 +2,7 @@ package visitor;
 
 
 import model.Atividade;
+import model.Compensacao;
 import model.Emissao;
 
 public class HtmlReportVisitor implements ReportVisitor {
@@ -51,6 +52,20 @@ public class HtmlReportVisitor implements ReportVisitor {
         System.out.println("<h1>Relatório de Emissão</h1>");
         System.out.println("<p><strong>Quantidade CO2:</strong> " + emissao.getQuantidadeCO2() + "</p>");
         System.out.println("<p><strong>Fator utilizado:</strong> " + emissao.getFatorUtilizado() + "</p>");
+        System.out.println("</body>");
+        System.out.println("</html>");
+    }
+
+    @Override
+    public void visit(Compensacao compensacao) {
+        System.out.println("<html>");
+        System.out.println("<head><title>Relatório - Compensação</title></head>");
+        System.out.println("<body>");
+        System.out.println("<h1>Relatório de Compensação</h1>");
+        System.out.println("<p><strong>Tipo:</strong> " + compensacao.getTipo() + "</p>");
+        System.out.println("<p><strong>Descrição:</strong> " + compensacao.getDescricao() + "</p>");
+        // Se quiser mostrar o valor numérico também:
+        // System.out.println("<p><strong>Valor/Qtd:</strong> " + compensacao.getValor() + "</p>");
         System.out.println("</body>");
         System.out.println("</html>");
     }

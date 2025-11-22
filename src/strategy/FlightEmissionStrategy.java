@@ -1,5 +1,8 @@
 package strategy;
 
+import model.Compensacao;
+import model.Usuario;
+
 public class FlightEmissionStrategy implements EmissionStrategy {
 
     private double distanciaKm;
