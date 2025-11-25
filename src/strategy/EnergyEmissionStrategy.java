@@ -13,6 +13,6 @@ public class EnergyEmissionStrategy implements EmissionStrategy {
 
     @Override
     public double calcular() {
-        return kwh * 0.5; // Exemplo fictício
+        return kwh * 0.5;
     }
 }

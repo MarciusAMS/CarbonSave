@@ -10,7 +10,6 @@ public class CompensarComCreditos implements IStrategyCompensacao {
     public Compensacao executarCompensacao(Person person) {
         double totalEmissao = person.getEmissaoTotal();
 
-        // LÓGICA: R$ 40,00 por tonelada (1000kg) de CO2
         double precoPorTonelada = 40.0;
         double custo = (totalEmissao / 1000.0) * precoPorTonelada;
 

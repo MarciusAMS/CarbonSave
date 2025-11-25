@@ -10,7 +10,7 @@ public class EmissionApiAdapter {
 
     public double obterEmissaoConvertida() {
         String json = client.getEmissionJson();
-        return 42.7; // conversão fictícia
+        return 42.7;
     }
 }
 
